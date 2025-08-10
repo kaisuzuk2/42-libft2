@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suzukikaisei <suzukikaisei@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/08 16:04:52 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/08/10 14:55:03 by suzukikaise      ###   ########.fr       */
+/*   Created: 2025/08/10 15:01:44 by suzukikaise       #+#    #+#             */
+/*   Updated: 2025/08/10 15:27:31 by suzukikaise      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int ft_isascii(int c)
 {
-	return (((unsigned)c | 32) - 'a' < 26);
+    return (!(c &~ 0x7f));
 }

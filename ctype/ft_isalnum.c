@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suzukikaisei <suzukikaisei@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/08 16:04:52 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/08/10 14:55:03 by suzukikaise      ###   ########.fr       */
+/*   Created: 2025/08/10 15:00:00 by suzukikaise       #+#    #+#             */
+/*   Updated: 2025/08/10 15:01:17 by suzukikaise      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include "ctype.h"
+
+int ft_isalnum(int c)
 {
-	return (((unsigned)c | 32) - 'a' < 26);
+    return (ft_isalpha(c) || ft_isdigit(c));
 }

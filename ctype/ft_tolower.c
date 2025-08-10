@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suzukikaisei <suzukikaisei@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/08 16:04:52 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/08/10 14:55:03 by suzukikaise      ###   ########.fr       */
+/*   Created: 2025/08/10 17:01:44 by suzukikaise       #+#    #+#             */
+/*   Updated: 2025/08/10 17:05:20 by suzukikaise      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include "ctype.h"
+
+int ft_tolower(int c)
 {
-	return (((unsigned)c | 32) - 'a' < 26);
+    if (ft_isupper(c))
+        return ((unsigned)c | 32);
+    return (c);
 }

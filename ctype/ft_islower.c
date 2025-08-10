@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: suzukikaisei <suzukikaisei@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/08 16:04:52 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/08/10 14:55:03 by suzukikaise      ###   ########.fr       */
+/*   Created: 2025/08/10 16:55:45 by suzukikaise       #+#    #+#             */
+/*   Updated: 2025/08/10 17:01:30 by suzukikaise      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+int ft_islower(int c)
 {
-	return (((unsigned)c | 32) - 'a' < 26);
+    return ((unsigned)c - 'a' < 26);
 }
